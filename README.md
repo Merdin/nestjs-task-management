@@ -1,4 +1,4 @@
-<p>To fix some repository issues, I used: https://stackoverflow.com/a/72887316/17775543</p>
+<p>To fix some repository issues, I used: <a href="https://stackoverflow.com/a/72887316/17775543" alt="https://stackoverflow.com/a/72887316/17775543" /></p>
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>

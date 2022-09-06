@@ -1,15 +1,16 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
+import { Task } from './task.entity';
 import { TasksService } from './tasks.service';
 
 @Controller('tasks')
 export class TasksController {
   constructor(private tasksService: TasksService) {}
 
-  //   // /tasks/:id
-  //   @Get('/:id')
-  //   getTaskById(@Param('id') id: string): Task {
-  //     return this.tasksService.getTaskById(id);
-  //   }
+  // /tasks/:id
+  @Get('/:id')
+  async getTaskById(@Param('id') id: string): Promise<Task> {
+    return await this.tasksService.getTaskById(id);
+  }
 
   //   // /tasks
   //   @Get()

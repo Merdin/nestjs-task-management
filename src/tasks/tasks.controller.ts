@@ -49,15 +49,16 @@ export class TasksController {
     return await this.tasksService.createTask(createTaskDto, user);
   }
 
-  // @Patch('/:id/status')
-  // async updateTaskStatus(
-  //   @Param('id') id: string,
-  //   @Body() updateTaskStatusDto: UpdateTaskStatusDto,
-  // ): Promise<Task> {
-  //   const { status } = updateTaskStatusDto;
+  @Patch('/:id/status')
+  async updateTaskStatus(
+    @Param('id') id: string,
+    @Body() updateTaskStatusDto: UpdateTaskStatusDto,
+    @GetUser() user: User,
+  ): Promise<Task> {
+    const { status } = updateTaskStatusDto;
 
-  //   return await this.tasksService.updateTaskStatus(id, status);
-  // }
+    return await this.tasksService.updateTaskStatus(id, status, user);
+  }
 
   @Delete('/:id')
   async deleteTask(@Param('id') id: string): Promise<void> {
